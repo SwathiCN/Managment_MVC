@@ -1,0 +1,54 @@
+﻿@model MarksDetail
+
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient mt-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Create Student Category</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post">
+            <input asp-for="MarksId" hidden />
+            <div class="border p-3" mt-4>
+                @*  <div asp-validation-summary="ModelOnly"></div> *@
+                <div class="form-floating py-2 col-12">
+
+                    <input asp-for="MarksId" disabled class="form-control border-0 shadow" />
+                    <label asp-for="MarksId" class="ms-2"></label>
+                   
+                </div>
+
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Subject" disabled class="form-control border-0 shadow" />
+                    <label asp-for="Subject" class="ms-2"></label>
+                   
+                </div>
+
+
+                <div class="form-floating py-2 col-12">
+                    @* space between text and text box *@
+                    <input asp-for="MarksObtained" disabled class="form-control border-0 shadow" />
+                    <label asp-for="MarksObtained" class="ms-2"></label>
+
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-danger form-control">Delete</button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        @* small/medium take 6or 3 col *@
+                        <a asp-controller="Student" asp-action="Index" class="btn btn-outline-secondary form-control">Back to List</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
